@@ -17,9 +17,10 @@ type Server struct {
 	db     *sql.DB
 }
 
-func NewServer() *Server {
+func NewServer(db *sql.DB) *Server {
 	return &Server{
 		router: mux.NewRouter(),
+		db:     db,
 	}
 }
 
@@ -36,7 +37,7 @@ func (s *Server) setupRoutes() {
 
 	// Product routes
 	s.router.HandleFunc("/products", productHandler.Create).Methods("POST")
-	s.router.HandleFunc("/products/{id}", productHandler.List).Methods("GET")
+	s.router.HandleFunc("/products", productHandler.List).Methods("GET")
 	s.router.HandleFunc("/products/{id}", productHandler.Get).Methods("GET")
 	s.router.HandleFunc("/products/{id}", productHandler.Update).Methods("PUT")
 	s.router.HandleFunc("/products/{id}", productHandler.Delete).Methods("DELETE")
@@ -64,7 +65,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	server := NewServer()
+	server := NewServer(db)
 	if err := server.Run(":8080"); err != nil {
 		log.Fatal(err)
 	}
