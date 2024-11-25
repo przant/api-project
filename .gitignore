@@ -15,8 +15,8 @@ go.work
 
 # Kubernetes / Helm
 *.kubeconfig
-./chart/Chart.lock
-./chart/charts/
+chart/Chart.lock
+chart/charts/
 *.tgz
 .kube/
 
