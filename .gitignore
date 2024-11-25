@@ -1,0 +1,153 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+./vendor/
+./bin/
+./dist/
+
+# Go workspace file
+go.work
+
+# Kubernetes / Helm
+*.kubeconfig
+chart/Chart.lock
+chart/charts/
+*.tgz
+.kube/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IDE - GoLand/IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific
+## Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Build / Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Test coverage
+coverage/
+*.cover
+.coverage
+.coverage.*
+coverage.txt
+coverage.xml
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Debug files
+debug
+debug.test
+__debug_bin
+
+# Certificate files
+*.pem
+*.key
+*.crt
+*.csr
+*.srl
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Binary files
+*.tar
+*.gz
+*.zip
+*.rar
+*.7z
+
+# Backup files
+*.bak
+*.backup
+*~.nib
+*.swp
+*.orig
+
+# Local development files
+local_dev/
+local.yaml
+override.yaml
+
+# Generated files
+*.pb.go
+*_string.go
+swagger.json
+swagger.yaml
+api/swagger/
+
+# Dependency directories
+gopath/
+goroot/
+
+# Project specific
+config.local.yaml
+values.local.yaml
+secrets.yaml
